@@ -1,0 +1,120 @@
+@import "../../../styles/utilities.scss";
+
+//Form styles desktop
+.formSectionContainer {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    .formSection {
+        width: 736px;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        .sectionSubtitle {
+            p {
+                font-size: map-get($font-sizes, "desktop-text-default");
+                line-height: $desktop-text-height;
+                font-weight: 400;
+            }
+
+            .boldText {
+                font-weight: 500;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                label {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 700;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: map-get($color-pallete, "neutralStout");
+                }
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid
+                        map-get($color-pallete, "neutralCloudy");
+                    font-size: map-get($font-sizes, "desktop-text-small");
+                    padding-block: 5px;
+
+                    &::placeholder {
+                        font-family: "DM Sans";
+                        font-size: map-get($font-sizes, "desktop-text-small");
+                        color: map-get($color-pallete, "neutralCloudy");
+                    }
+                    &:focus {
+                        outline: none;
+                        font-weight: 400;
+                        color: map-get($color-pallete, $neutralStout);
+                    }
+                }
+            }
+            .buttonGroup {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                button {
+                    margin-top: 5px;
+                    padding: 1rem 2rem;
+                    border-radius: 100px;
+                    background-color: map-get($color-pallete, "brandColor");
+                    border: none;
+                    width: fit-content;
+                    color: map-get($color-pallete, "neutralWhite");
+                    font-size: map-get($font-sizes, "desktop-text-small");
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+//Form styles mobile
+@media (max-width: 600px) {
+    .formSectionContainer {
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        padding-inline: 16px;
+        .formSection {
+            width: 100%;
+            .sectionSubtitle {
+                p {
+                    font-size: map-get($font-sizes, "mobile-h3");
+                    line-height: $mobile-text-height;
+                    font-weight: 400;
+                }
+
+                .boldText {
+                    font-weight: 500;
+                }
+            }
+            form {
+                .formGroup {
+                    label {
+                        font-size: calc(
+                            map-get($font-sizes, "mobile-text-small") - 2px
+                        );
+                    }
+                }
+            }
+        }
+    }
+}

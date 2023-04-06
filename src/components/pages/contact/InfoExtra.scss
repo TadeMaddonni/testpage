@@ -1,0 +1,156 @@
+@import "../../../styles/utilities.scss";
+
+//Info extra desktop
+.infoExtraContainer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-inline: 10%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .infoExtra {
+        width: 100%;
+        display: flex;
+        .infoContainer {
+            //padding: 5% 10%;
+            padding: 5% 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .top {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: map-get($font-sizes, "desktop-text-default");
+                    line-height: $desktop-text-height;
+                }
+
+                p {
+                    font-size: map-get($font-sizes, "desktop-text-small");
+                    line-height: 140%;
+                    font-weight: 400;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .buttonContainer {
+                    height: fit-content;
+                    button {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 140%;
+                        text-align: left;
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .clipboard {
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        opacity: 0;
+                        transition: all 0.4s ease;
+
+                        p {
+                            font-size: 14px;
+                            line-height: 140%;
+                            font-weight: 400;
+                            color: map-get($color-pallete, "neutralCloudy");
+                        }
+
+                        svg {
+                            fill: none;
+                            height: 12px;
+                            width: 14px;
+                        }
+                    }
+
+                    &:hover {
+                        .clipboard {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &.careers {
+                background-color: map-get($color-pallete, "secondaryYellow");
+                .top {
+                    h3 {
+                        color: map-get($color-pallete, "brandColor");
+                    }
+
+                    p {
+                        color: map-get($color-pallete, "secondaryBlue");
+                    }
+                }
+
+                .bottom {
+                    button {
+                        color: map-get($color-pallete, "secondaryBlue");
+                    }
+
+                    .buttonContainer {
+                        .clipboard {
+                            p {
+                                color: map-get($color-pallete, "neutralStone");
+                            }
+
+                            .checked {
+                                fill: $neutralStone;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.design {
+                background-color: map-get($color-pallete, "brandColor");
+
+                .top {
+                    h3 {
+                        color: map-get($color-pallete, "secondaryYellow");
+                    }
+
+                    p {
+                        color: map-get($color-pallete, "neutralWhite");
+                    }
+                }
+
+                .bottom {
+                    button {
+                        color: map-get($color-pallete, "neutralWhite");
+                    }
+
+                    .buttonContainer {
+                        .clipboard {
+                            .checked {
+                                fill: $neutralCloudy;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Info extra mobile
+@media (max-width: 600px) {
+    .infoExtraContainer {
+        .infoExtra {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../styles/global.scss";
+
+//Hero section desktop
+.heroSectionContainer {
+    height: 85vh;
+    background-color: $secondaryBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .heroSection {
+        margin-bottom: 70px;
+        h1 {
+            @include title;
+        }
+
+        h2 {
+            @include subtitle;
+            color: map-get($color-pallete, "secondaryYellow");
+        }
+    }
+}
+
+//Hero section mobile
+@media (max-width: 600px) {
+    .heroSectionContainer {
+        height: 60vh;
+        padding-inline: 16px;
+        .heroSection {
+            margin-bottom: 0;
+            width: 100%;
+            h1 {
+                font-size: map-get($font-sizes, "mobile-h2");
+                line-height: $mobile-h2-height;
+            }
+            h2 {
+                font-size: map-get($font-sizes, "mobile-h2");
+                line-height: $mobile-h2-height;
+            }
+        }
+    }
+}

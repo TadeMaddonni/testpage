@@ -1,0 +1,86 @@
+//Color Pallete
+
+$brandColor: #3098f3;
+$secondaryBlue: #082c4e;
+$secondaryYellow: #ffcc00;
+$secondayWatermelon: #fe6571;
+$secondayCream: #f2eae2;
+$neutralWhite: #ffffff;
+$neutralCloudy: #d9d9da;
+$neutralStone: #747481;
+$neutralStout: #05051e;
+
+$color-pallete: (
+    brandColor: $brandColor,
+    secondaryBlue: $secondaryBlue,
+    secondaryYellow: $secondaryYellow,
+    secondayWatermelon: $secondayWatermelon,
+    secondayCream: $secondayCream,
+    neutralWhite: $neutralWhite,
+    neutralCloudy: $neutralCloudy,
+    neutralStone: $neutralStone,
+    neutralStout: $neutralStout,
+);
+
+// Font Family
+$brandFont: "DM Sans", sans-serif;
+$supportiveFont: "Archivo", sans-serif;
+
+// Font Sizes => 1rem = 16px
+$desktop-h1: 3.5rem;
+$desktop-h2: 2.625rem;
+$desktop-h3: 2rem;
+$desktop-h4: 1rem;
+$desktop-text-default: 24px;
+$desktop-text-small: 1.125rem;
+
+$mobile-h1: 2.5rem;
+$mobile-h2: 2.125rem;
+$mobile-h3: 1.5rem;
+$mobile-h4: 1rem;
+$mobile-text-default: 1.25rem;
+$mobile-text-small: 1.125rem;
+
+// Text line heights
+$desktop-h1-height: 4.25rem;
+$desktop-h2-height: 3.25rem;
+$desktop-h3-height: 2.5rem;
+$desktop-h4-height: 1.5rem;
+$desktop-text-height: 1.75rem;
+
+$mobile-h1-height: 3rem;
+$mobile-h2-height: 2.75rem;
+$mobile-h3-height: 2rem;
+$mobile-h4-height: 1.5rem;
+$mobile-text-height: 1.75rem;
+
+//Letter spacing
+$h1-spacing: -0.02em;
+$h4-spacing: 0.02em;
+
+$font-sizes: (
+    desktop-h1: $desktop-h1,
+    desktop-h2: $desktop-h2,
+    desktop-h3: $desktop-h3,
+    desktop-h4: $desktop-h4,
+    desktop-text-default: $desktop-text-default,
+    desktop-text-small: $desktop-text-small,
+    mobile-h1: $mobile-h1,
+    mobile-h2: $mobile-h2,
+    mobile-h3: $mobile-h3,
+    mobile-h4: $mobile-h4,
+    mobile-text-default: $mobile-text-default,
+    mobile-text-small: $mobile-text-small,
+);
+
+@mixin title {
+    font-size: map-get($font-sizes, "desktop-h2");
+    font-weight: 400;
+    line-height: calc($desktop-h2-height - 10px);
+    color: map-get($color-pallete, "neutralWhite");
+}
+
+@mixin subtitle {
+    font-size: map-get($font-sizes, "desktop-h2");
+    font-weight: 500;
+}

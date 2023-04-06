@@ -1,0 +1,89 @@
+@import "../../styles/utilities.scss";
+
+//Topbar on desktop
+.topbarContainer {
+    width: 100%;
+    padding-block: 50px;
+    background-color: $secondaryBlue;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+
+    &.navHidden {
+        transform: translateY(-100%);
+    }
+
+    .topbar {
+        height: 100%;
+        padding-inline: 10%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        align-items: center;
+    }
+    .right {
+        flex-grow: 1;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+// Topbar on mobile
+@media (max-width: 600px) {
+    .topbarContainer {
+        position: relative;
+        height: 55px;
+
+        &.navHidden {
+            transform: none;
+        }
+        .topbar {
+            justify-content: space-between;
+
+            .right {
+                flex-grow: 0;
+            }
+        }
+    }
+    .hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 3px;
+            background-color: $neutralWhite;
+            transform-origin: left;
+            transition: all 0.5s ease;
+        }
+
+        &.active {
+            span {
+                &:first-child {
+                    background-color: white;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    background-color: white;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
