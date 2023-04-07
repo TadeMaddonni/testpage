@@ -25,7 +25,15 @@ const Topbar = () => {
             <nav className="topbar">
                 {/* Logo container */}
                 <div className="left">
-                    <img src="./src/assets/Logo/iso.png" alt="" />
+                    <img
+                        src="https://i.postimg.cc/7YXqWjK0/iso.png"
+                        alt="Logo empresa Indicius"
+                    />
+                    <img
+                        src="https://i.postimg.cc/Xq7zG196/Full-Logo.png"
+                        alt="Logo empresa Indicius"
+                        className="imgMobile"
+                    />
                 </div>
                 {/* Menu container */}
                 <div className="right">

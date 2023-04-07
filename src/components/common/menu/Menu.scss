@@ -26,20 +26,20 @@
 @media (max-width: 600px) {
     .menuContainer {
         animation: slideOut 0.5 ease backwards;
-        padding-top: 90px;
+        padding-top: 50px;
         padding-inline-start: 20px;
         position: absolute;
         justify-content: flex-start;
         width: 100%;
         height: 100vh;
         background-color: map-get($color-pallete, "secondaryBlue");
-        top: 70px;
+        top: 40px;
         right: calc(-110vw);
         display: none;
 
         li a {
             font-weight: 400;
-            font-size: map-get($font-sizes, "mobile-h2");
+            font-size: map-get($font-sizes, "mobile-h1");
             line-height: 48px;
             letter-spacing: -0.02em;
         }

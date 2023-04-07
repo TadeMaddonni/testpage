@@ -51,6 +51,13 @@
                     font-size: map-get($font-sizes, "desktop-text-small");
                     padding-block: 5px;
 
+                    &.error {
+                        border-bottom-color: map-get(
+                            $color-pallete,
+                            "secondaryWatermelon"
+                        );
+                    }
+
                     &::placeholder {
                         font-family: "DM Sans";
                         font-size: map-get($font-sizes, "desktop-text-small");
@@ -61,6 +68,11 @@
                         font-weight: 400;
                         color: map-get($color-pallete, $neutralStout);
                     }
+                }
+
+                span {
+                    color: map-get($color-pallete, "secondaryWatermelon");
+                    font-size: 14px;
                 }
             }
             .buttonGroup {

@@ -1,0 +1,89 @@
+@import "../../../styles/utilities.scss";
+
+.formErrorContainer {
+    margin-top: 90px;
+    .formError {
+        width: 100%;
+        padding-inline: 10%;
+        display: flex;
+        gap: 20px;
+        .left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+
+            .top {
+                color: map-get($color-pallete, "secondaryWatermelon");
+                h2 {
+                    margin-bottom: 15px;
+                    font-family: $supportiveFont;
+                    font-size: map-get($font-sizes, "desktop-h2");
+                    font-weight: 500;
+                    line-height: 120%;
+
+                    &.error {
+                        color: #fe6571;
+                    }
+                    &.success {
+                        color: map-get($color-pallete, "brandColor");
+                    }
+                }
+                span {
+                    font-family: $supportiveFont;
+                    font-weight: 400;
+                    line-height: 140%;
+                    font-size: map-get($font-sizes, "desktop-text-default");
+                    &.error {
+                        color: #fe6571;
+                    }
+                    &.success {
+                        color: map-get($color-pallete, "brandColor");
+                    }
+                }
+            }
+
+            .bottom {
+                p {
+                    font-size: map-get($font-sizes, "desktop-text-default");
+
+                    color: map-get($color-pallete, "secondaryBlue");
+                    font-weight: 400;
+                    line-height: 140%;
+                }
+            }
+        }
+        .right {
+            height: 100%;
+            width: 50%;
+            img {
+                height: 100%;
+                width: 90%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+//Form post reques results in mobile
+@media (max-width: 600px) {
+    .formErrorContainer {
+        .formError {
+            flex-direction: column-reverse;
+            padding-inline: 15px;
+            .left,
+            .right {
+                width: 100%;
+                justify-content: center;
+            }
+            .left {
+                .top {
+                    h2 {
+                        font-size: map-get($font-sizes, "mobile-h2");
+                    }
+                }
+            }
+        }
+    }
+}
