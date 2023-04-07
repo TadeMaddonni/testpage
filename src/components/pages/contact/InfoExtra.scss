@@ -149,6 +149,8 @@
 //Info extra mobile
 @media (max-width: 600px) {
     .infoExtraContainer {
+        margin-top: 150px;
+        height: 75vh;
         .infoExtra {
             flex-direction: column;
         }

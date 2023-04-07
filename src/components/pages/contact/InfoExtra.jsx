@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./InfoExtra.scss";
-import CopyToClipboard from "../../utils/icons/CopyToClipboard";
-import CopiedToClipboard from "../../utils/icons/CopiedToClipboard";
+import CopyToClipboard from "./icons/CopyToClipboard";
+import CopiedToClipboard from "./icons/CopiedToClipboard";
 
 const InfoExtra = () => {
     const [careerEmailCopied, setCareerEmailCopied] = useState(false);
