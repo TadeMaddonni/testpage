@@ -13,3 +13,7 @@
 body {
     font-family: $brandFont;
 }
+
+.no-scroll {
+    overflow: hidden;
+}

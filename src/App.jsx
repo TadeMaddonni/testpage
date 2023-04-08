@@ -3,6 +3,7 @@ import Contact from "./pages/contact/Contact";
 import "./styles/global.scss";
 import Topbar from "./components/common/Topbar";
 import Footer from "./components/common/Footer";
+import { useState } from "react";
 
 function App() {
     return (

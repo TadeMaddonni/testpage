@@ -23,9 +23,8 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     .menuContainer {
-        animation: slideOut 0.5 ease backwards;
         padding-top: 50px;
         padding-inline-start: 20px;
         position: absolute;
@@ -33,7 +32,7 @@
         width: 100%;
         height: 100vh;
         background-color: map-get($color-pallete, "secondaryBlue");
-        top: 40px;
+        top: 50px;
         right: calc(-110vw);
         display: none;
 
@@ -58,20 +57,31 @@
     }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+    .menuContainer {
+        padding-top: 0;
+        li a {
+            font-size: map-get($font-sizes, "mobile-h1");
+            line-height: 48px;
+            letter-spacing: -0.02em;
+        }
+        &.active {
+            animation: slideIn 0.5s ease forwards;
+            right: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
 @keyframes slideIn {
     0% {
         right: calc(-110vw);
     }
     100% {
         right: 0px;
-    }
-}
-
-@keyframes slideOut {
-    0% {
-        right: 0px;
-    }
-    100% {
-        right: calc(-110vw);
     }
 }

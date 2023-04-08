@@ -113,10 +113,10 @@ boton hovereable de copy to clipboard (Bugeo)
 entrada suavizada del nav en mobile
 
 #Falta
--Cambio de logo en mobile ()
+-Cambio de logo en mobile (done)
 -Grafico del sitio en componentes (Done)
 -Navbar active dinamico
--Footer, desktop y mobile
--Posibles resultados del request
--Validaciones y muestra de errores
--Logica del request
+-Footer, desktop y mobile (Done)
+-Posibles resultados del request (Done)
+-Validaciones y muestra de errores (Done)
+-Logica del request(Done)
