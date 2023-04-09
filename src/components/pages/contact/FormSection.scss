@@ -100,9 +100,6 @@
 @media (max-width: 600px) {
     .formSectionContainer {
         margin-block: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: fit-content;
         padding-inline: 16px;
         .formSection {
@@ -127,6 +124,46 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .formSectionContainer {
+        margin-block: 90px;
+        height: fit-content;
+        padding-inline: 40px;
+        .formSection {
+            width: 100%;
+            .sectionSubtitle {
+                p {
+                    font-size: map-get($font-sizes, "mobile-h3");
+                    line-height: $mobile-text-height;
+                    font-weight: 400;
+                }
+
+                .boldText {
+                    font-weight: 500;
+                }
+            }
+            form {
+                .formGroup {
+                    label {
+                        font-size: calc(
+                            map-get($font-sizes, "mobile-text-small") - 2px
+                        );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1442px) {
+    .formSectionContainer {
+        height: 60vh;
+        .formSection {
+            width: 40%;
         }
     }
 }

@@ -30,27 +30,36 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             {/* Social media container, only mobile */}
             <ul className="socialMediaContainer">
                 <li>
-                    <a href="">
+                    <a
+                        href="https://www.instagram.com/indiciusar/"
+                        target="_blank"
+                    >
                         <Instagram />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a
+                        href="https://www.linkedin.com/company/indicius/?originalSubdomain=ar"
+                        target="_blank"
+                    >
                         <Linkedin />
                     </a>
                 </li>
-                <li>
-                    <a href="">
+                <li className="mobileHide">
+                    <a
+                        href="https://twitter.com/indicius?lang=es"
+                        target="_blank"
+                    >
                         <Twitter />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://dribbble.com/Indicius" target="_blank">
                         <Dribbble />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://medium.com/indicius" target="_blank">
                         <Medium />
                     </a>
                 </li>

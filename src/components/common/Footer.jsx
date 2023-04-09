@@ -15,8 +15,17 @@ const Footer = () => {
                 {/* Footer part 1 */}
                 <div className="footerPartOne">
                     <div className="top">
-                        <p>From Argentina to the world. </p>
-                        <span>contact@indicius.com</span>
+                        <p className="onlyMobile">
+                            Av. del Libertador 1000,
+                            <br />
+                            B1638 Vicente López, Buenos Aires, Argentina
+                            <br />
+                             info@indicius.com
+                        </p>
+                        <p className="onlyDesktop">
+                            From Argentina to the world. <br />
+                            contact@indicius.com
+                        </p>
                     </div>
                     <div className="bottom">
                         <span>@ Indicius 2023</span>
@@ -83,37 +92,58 @@ const Footer = () => {
                 <div className="footerPartThree">
                     <ul>
                         <li>
-                            <a href="">
+                            <a
+                                href="https://www.instagram.com/indiciusar/"
+                                target="_blank"
+                            >
                                 <Instagram />
                             </a>
                         </li>
-                        <li>
-                            <a href="">
+                        <li className="mobileHide">
+                            <a
+                                href="https://twitter.com/indicius?lang=es"
+                                target="_blank"
+                            >
                                 <Twitter />
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a
+                                href="https://medium.com/indicius"
+                                target="_blank"
+                            >
                                 <Medium />
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a
+                                href="https://dribbble.com/Indicius"
+                                target="_blank"
+                            >
                                 <Dribbble />
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a
+                                href="https://www.linkedin.com/company/indicius/?originalSubdomain=ar"
+                                target="_blank"
+                            >
                                 <Linkedin />
                             </a>
                         </li>
-                        <li>
-                            <a href="">
+                        <li className="mobileHide">
+                            <a
+                                href="https://www.twitch.tv/indiciusstreaming"
+                                target="_blank"
+                            >
                                 <Twitch />
                             </a>
                         </li>
-                        <li>
-                            <a href="">
+                        <li className="mobileHide">
+                            <a
+                                href="https://www.youtube.com/@indicius"
+                                target="_blank"
+                            >
                                 <Youtube />
                             </a>
                         </li>
